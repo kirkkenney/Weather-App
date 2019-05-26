@@ -8,6 +8,9 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
     <icon src="icons/weather_icon.png" />
 </widget>
