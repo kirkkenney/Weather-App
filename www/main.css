@@ -1,0 +1,295 @@
+body {
+    text-align: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+#phone {
+    width: 350px;
+    height: 90%;
+    margin: 2.5% auto 0 auto;
+    border: solid black 2px;
+    overflow: hidden;
+}
+}
+
+@media only screen and (max-width: 768px) {
+#phone {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+}
+
+#overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-image: url('images/home-bg.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40%;
+    transition: all .5s;
+}
+
+#overlay p {
+    font-size: 30px;
+    margin: 0 auto 5% auto;
+    width: 80%;
+    line-height: 40px;
+    color: rgb(4,44,61);
+}
+
+#overlay input {
+    font-size: 25px;
+    margin: 0 auto;
+    border: solid rgb(4,44,61) 1px;
+    padding: 2%;
+    width: 80%;
+    background-color: rgba(211,241,255,.5);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+#overlay input:focus {
+    background-color: rgba(4,44,61,.8);
+    color: rgb(211,241,255);
+    border: solid 1px rgb(211,241,255);
+}
+
+#overlay button {
+    display: block;
+    font-size: 22px;
+    padding: 2% 4%;
+    margin: 5% auto;
+    background-color: rgb(4,44,61);
+    color: rgb(211,241,255);
+    border: solid 1px rgb(211,241,255);
+    box-shadow: 4px 4px 6px rgb(4,44,61);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+#overlay button:active {
+    transform: translateY(3px);
+}
+
+#overlay p#error {
+    font-size: 18px;
+    margin: 10% auto 0 auto;
+    color: red;
+    background-color: rgba(215,215,215,0.3);
+    width: 80%;
+}
+
+#main {
+    display: none;
+    z-index: 1;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    color: rgb(4,44,61);
+}
+
+#main #top {
+    padding: 4% 2%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(4,44,61);
+    border-bottom: solid 2px rgb(211, 241, 255);
+    box-shadow: 4px 4px 6px rgb(4,44,61);
+}
+
+#main #top input {
+    float: left;
+    margin-left: 2.5%;
+    font-size: 18px;
+    padding: 2%;
+    width: 60%;
+    background-color: rgb(211, 241,255);
+    border: solid 1px rgb(211, 241,255);
+    font-family: inherit;
+    border-radius: 8px;
+}
+
+#main #top input:focus {
+    background-color: rgb(4,44,61);
+    color: rgb(211, 241,255);
+}
+
+#main #top button {
+    float: left;
+    font-size: 18px;
+    padding: 2%;
+    margin-left: 2%;
+    box-sizing: border-box;
+    background-color: rgb(211, 241,255);
+    border: solid 1px rgb(4,44,61);
+    font-family: inherit;
+    border-radius: 8px;
+}
+
+.sunny {
+    background-image: url('images/sun-bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rain {
+    background-image: url('images/rain-bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snow {
+    background-image: url('images/snow-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overcast {
+    background-image: url('images/clouds-bg.jpg');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cardContainer {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#cardContainer #location {
+    font-size: 22px;
+    margin: 5% auto;
+    width: 90%;
+    padding: 2%;
+    box-sizing: border-box;
+    border: solid rgb(4,44,61) 1px;
+    box-shadow: 3px 3px 6px rgb(4,44,61);
+    border-radius: 8px;
+}
+
+.card {
+    position: relative;
+    height: 120px;
+    width: 90%;
+    border: solid rgb(4,44,61) 1px;
+    margin: 3.5% auto;
+    box-shadow: 3px 3px 6px rgb(4,44,61);
+    border-radius: 8px;
+}
+
+.card .info-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    text-align: center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: 5% 5%;
+}
+
+.card .info-left .top {
+    width: 90%;
+    margin-top: 5%;
+    height: 20%;
+}
+.card .info-left .top .icon {
+    float: left;
+    width: 40%;
+    height: 100%;
+    margin-top: -5%;
+}
+
+.card .info-left .top .icon img {
+    height: 180%;
+}
+
+.card .info-left .top .time {
+    float: right;
+    width: 50%;
+    padding: 2% 0;
+    font-size: 18px;
+    border: solid rgb(211, 241,255) 1px;
+    background-color: rgb(4,44,61);
+    color: rgb(211, 241,255);
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px rgb(4,44,61);
+}
+
+.card .info-left .description {
+    margin-top: 12%;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.card .info-left .temp {
+    margin-top: 5%;
+    font-size: 15px;
+}
+
+.card .info-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card .info-right .tile {
+    height: 45%;
+    width: 45%;
+    margin: 2.5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.coat {
+    background-image: url('icons/coat.png');
+}
+
+.hoodie {
+    background-image: url('icons/hoodie.png');
+}
+
+.jeans {
+    background-image: url('icons/jeans.png');
+}
+
+.ponytail {
+    background-image: url('icons/ponytail.png');
+}
+
+.shorts {
+    background-image: url('icons/shorts.png');
+}
+
+.tshirt {
+    background-image: url('icons/tshirt.png');
+}
+
+.umbrella {
+    background-image: url('icons/umbrella.png');
+}
