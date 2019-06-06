@@ -1,4 +1,4 @@
-var apiKey = 'd7f1663f161b02f36124833bb2e4185c';
+var apiKey = 'YOUR_API_KEY_GOES_HERE';
 var units = 'metric';
 var country = 'gb';
 
